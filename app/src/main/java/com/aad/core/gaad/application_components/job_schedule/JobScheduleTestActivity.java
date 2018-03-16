@@ -1,5 +1,6 @@
 package com.aad.core.gaad.application_components.job_schedule;
 
+import android.annotation.TargetApi;
 import android.app.job.JobInfo;
 import android.app.job.JobScheduler;
 import android.content.ComponentName;
@@ -34,10 +35,14 @@ public class JobScheduleTestActivity extends AppCompatActivity {
         });
 
         stopJob.setOnClickListener(new View.OnClickListener() {
+            @TargetApi(Build.VERSION_CODES.M)
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View view) {
-                JobScheduler jobScheduler = (JobScheduler) JobScheduleTestActivity.this.getSystemService(JOB_SCHEDULER_SERVICE);
+               // JobScheduler jobScheduler = (JobScheduler) JobScheduleTestActivity.this.getSystemService(JOB_SCHEDULER_SERVICE);
+
+                JobScheduler jobScheduler =  JobScheduleTestActivity.this.getSystemService(JobScheduler.class);
+
                 jobScheduler.cancelAll();
             }
         });

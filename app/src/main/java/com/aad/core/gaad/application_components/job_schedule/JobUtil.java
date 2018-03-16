@@ -1,5 +1,6 @@
 package com.aad.core.gaad.application_components.job_schedule;
 
+import android.annotation.TargetApi;
 import android.app.job.JobInfo;
 import android.app.job.JobScheduler;
 import android.content.ComponentName;
@@ -15,6 +16,7 @@ import static android.content.Context.JOB_SCHEDULER_SERVICE;
 
 public class JobUtil {
 
+    @TargetApi(Build.VERSION_CODES.M)
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public static void startJob(Context context){
         ComponentName componentName = new ComponentName(context,JobScheduleTestService.class);
@@ -25,7 +27,9 @@ public class JobUtil {
 
         builder.setRequiresCharging(true);
 
-        JobScheduler jobScheduler = (JobScheduler) context.getSystemService(JOB_SCHEDULER_SERVICE);
+        //JobScheduler jobScheduler = (JobScheduler) context.getSystemService(JOB_SCHEDULER_SERVICE);
+
+        JobScheduler jobScheduler = context.getSystemService(JobScheduler.class);
 
         jobScheduler.schedule(builder.build());
 
