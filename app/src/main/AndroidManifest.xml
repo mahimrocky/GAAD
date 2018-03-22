@@ -16,11 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".application_components.job_schedule.JobScheduleTestActivity"></activity>
+        <activity android:name=".application_components.job_schedule.JobScheduleTestActivity" />
 
-        <service android:name=".application_components.job_schedule.JobScheduleTestService"
-            android:permission="android.permission.BIND_JOB_SERVICE"
-            />
+        <service
+            android:name=".application_components.job_schedule.JobScheduleTestService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity android:name=".application_components.shedule_task_by_alarm.AlarmActivity" />
+        <activity android:name=".persistent_data_storage.content_provider.ContentProviderTestActivity"></activity>
     </application>
 
 </manifest>
