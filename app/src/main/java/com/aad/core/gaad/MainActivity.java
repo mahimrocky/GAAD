@@ -7,10 +7,11 @@ import android.view.View;
 import android.widget.Button;
 
 import com.aad.core.gaad.application_components.job_schedule.JobScheduleTestActivity;
+import com.aad.core.gaad.persistent_data_storage.content_provider.ContentProviderTestActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button jobSchedule;
+    Button jobSchedule, contentProvider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,17 +19,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         jobSchedule = (Button) findViewById(R.id.button_job_schedule);
-
+        contentProvider = (Button) findViewById(R.id.button_content_provider);
 
 
         jobSchedule.setOnClickListener(this);
+        contentProvider.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.button_job_schedule:
                 startActivity(new Intent(MainActivity.this, JobScheduleTestActivity.class));
+                break;
+            case R.id.button_content_provider:
+                startActivity(new Intent(MainActivity.this, ContentProviderTestActivity.class));
                 break;
         }
     }
