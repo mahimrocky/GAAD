@@ -1,0 +1,26 @@
+Posting Jenna's feedback here again ... Just so everyone is on the same page :
+Overall:
+
+Clean look and feel, and generally we didn’t run into any issues figuring out how it worked. Really nice work, and the discovery screen was pretty cool. However, you should keep in mind that we use RightMesh apps all the time, so we are a pretty biased test case. Would be great to test with people who had never used RightMesh before.
+I feel like this could maybe use a little more internal onboarding. It’s a lot of effort for a user to get through the process of importing all of their information to make a business card, without knowing the benefits – explain the why for the up-front effort. I would even say as far as just adding a little more information on the page where you create your card to tell the user what this is for.
+Follow through for creating a card – as a user, you have put in a lot of effort to make a card. You don’t really see the benefit of it until you exchange details. I felt there was a disconnect between your own profile and other users, and you never actually see what your own card looks like. Showing your profile/card as a foundation after completing adding your information would provide the benefit of reward.
+A much future feature set could really get into customizing your card – picking a layout, making it double sided, choosing colours.
+Possible business opportunities – would be interested in learning more about what your plans are for distribution and use.
+Extended testing – what happens when you add more phones?
+
+General UI/UX issues
+
+Allow last name as initial only – didn’t see a need for the two character lower limit, since some people might just want an initial ex. Jenna M
+When adding to a card, automatically move down page when field entered (on tapping next/enter button), so the user does not have to scroll.
+This is totally dependent on audience and market you are targeting, but the word Designation is not common in Canada. Typically, this would be Title. But if you are marketing to Bangladesh, and that is a word that is used locally there, ignore it.
+Icon for expanding the FAB is not clear – typically would be for expanding an image or window.
+No way out of discovery screen – a back or cancel button would be great to have here.
+“Add card” not a clear from a functionality standpoint – thought it was for adding another identity for yourself. Could be because of where this is located, combined with the title.
+UI for another person’s card could use some refinement. Look at alternative business card designs… text is quite small and the card is pretty dark so things become hard to read. Would be great to break this out full screen when tapped, or just give it more space from the header.
+Cancel/done buttons on adding a person to a group – reverse order so done is closest to right hand (less stretch for action). Also the radial controls could use more space between them to make them easier to tap.
+Email/phone +/- icons overlapping with dropdown – (only seen on a small width screen) – but look at performance on different resolution devices.
+When entering details, if fields are mandatory, then don’t add a minus button since you cannot take them away. Could also indicate that they are mandatory before saving.
+Carry over the orange titles for sections seen on viewing a card to the editing page for consistency.
+There are two separate buttons for 3 sort types. You could simplify this to a filter button with three option – groups, alphabetical, date added.
+
+Anyway, nice work to all involved! Use as little or as much of this, and if you have any questions, let me know.

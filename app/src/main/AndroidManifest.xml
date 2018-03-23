@@ -23,12 +23,14 @@
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <activity android:name=".application_components.shedule_task_by_alarm.AlarmActivity" />
-        <activity android:name=".persistent_data_storage.content_provider.ContentProviderTestActivity"></activity>
+        <activity android:name=".persistent_data_storage.content_provider.ContentProviderTestActivity" />
 
         <provider
-            android:name="com.aad.core.gaad.persistent_data_storage.content_provider.MyProvider"
+            android:name=".persistent_data_storage.content_provider.MyProvider"
             android:authorities="com.aad.core.gaad.persistent_data_storage.content_provider.MyProvider"
             android:exported="false" />
+
+        <activity android:name=".persistent_data_storage.raed_raw_resources.RawResourcesReadActivity"></activity>
     </application>
 
 </manifest>
