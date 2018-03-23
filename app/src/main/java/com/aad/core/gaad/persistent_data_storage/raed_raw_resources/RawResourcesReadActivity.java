@@ -2,6 +2,7 @@ package com.aad.core.gaad.persistent_data_storage.raed_raw_resources;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.aad.core.gaad.R;
@@ -28,6 +29,8 @@ public class RawResourcesReadActivity extends AppCompatActivity {
 
         InputStreamReader inputStream = null;
 
+        StringBuilder returnString = new StringBuilder();
+
         try {
             inputStream = new InputStreamReader(getAssets().open("bcs_requirement.txt"));
 
@@ -36,8 +39,10 @@ public class RawResourcesReadActivity extends AppCompatActivity {
             String text;
 
             while((text = bufferedReader.readLine())!=null){
-                textView.setText(text);
+               returnString.append(text);
             }
+            Log.d("text_test",returnString.toString());
+            textView.setText(returnString.toString());
 
         } catch (IOException e) {
             e.printStackTrace();
