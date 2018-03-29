@@ -30,7 +30,19 @@
             android:authorities="com.aad.core.gaad.persistent_data_storage.content_provider.MyProvider"
             android:exported="false" />
 
-        <activity android:name=".persistent_data_storage.raed_raw_resources.RawResourcesReadActivity"></activity>
+        <activity android:name=".persistent_data_storage.raed_raw_resources.RawResourcesReadActivity" />
+        <activity android:name=".persistent_data_storage.preference.PreferenceTestActivity"
+            android:launchMode="singleTop"
+            />
+        <activity android:name=".persistent_data_storage.preference.SettingsActivity"
+            android:parentActivityName=".persistent_data_storage.preference.PreferenceTestActivity"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".persistent_data_storage.preference.PreferenceTestActivity"
+                />
+
+        </activity>
     </application>
 
 </manifest>
