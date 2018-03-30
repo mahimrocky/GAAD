@@ -7,13 +7,14 @@ import android.view.View;
 import android.widget.Button;
 
 import com.aad.core.gaad.application_components.job_schedule.JobScheduleTestActivity;
+import com.aad.core.gaad.application_components.loader.LoaderActivity;
 import com.aad.core.gaad.persistent_data_storage.content_provider.ContentProviderTestActivity;
 import com.aad.core.gaad.persistent_data_storage.preference.PreferenceTestActivity;
 import com.aad.core.gaad.persistent_data_storage.raed_raw_resources.RawResourcesReadActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button jobSchedule, contentProvider,readResources,preference;
+    Button jobSchedule, contentProvider,readResources,preference,loader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +25,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         contentProvider = (Button) findViewById(R.id.button_content_provider);
         readResources = (Button) findViewById(R.id.button_read_resources);
         preference = (Button) findViewById(R.id.button_preference);
+        loader = (Button) findViewById(R.id.button_loader);
 
 
         jobSchedule.setOnClickListener(this);
         contentProvider.setOnClickListener(this);
         readResources.setOnClickListener(this);
         preference.setOnClickListener(this);
+        loader.setOnClickListener(this);
     }
 
     @Override
@@ -46,6 +49,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button_preference:
                 startActivity(new Intent(MainActivity.this, PreferenceTestActivity.class));
+                break;
+            case R.id.button_loader:
+                startActivity(new Intent(MainActivity.this, LoaderActivity.class));
                 break;
         }
     }

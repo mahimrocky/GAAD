@@ -31,18 +31,17 @@
             android:exported="false" />
 
         <activity android:name=".persistent_data_storage.raed_raw_resources.RawResourcesReadActivity" />
-        <activity android:name=".persistent_data_storage.preference.PreferenceTestActivity"
-            android:launchMode="singleTop"
-            />
-        <activity android:name=".persistent_data_storage.preference.SettingsActivity"
-            android:parentActivityName=".persistent_data_storage.preference.PreferenceTestActivity"
-            >
+        <activity
+            android:name=".persistent_data_storage.preference.PreferenceTestActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".persistent_data_storage.preference.SettingsActivity"
+            android:parentActivityName=".persistent_data_storage.preference.PreferenceTestActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".persistent_data_storage.preference.PreferenceTestActivity"
-                />
-
+                android:value=".persistent_data_storage.preference.PreferenceTestActivity" />
         </activity>
+        <activity android:name=".application_components.loader.LoaderActivity"></activity>
     </application>
 
 </manifest>
