@@ -42,7 +42,8 @@
                 android:value=".persistent_data_storage.preference.PreferenceTestActivity" />
         </activity>
         <activity android:name=".application_components.loader.LoaderActivity" />
-        <activity android:name=".ui_and_ux.layout_in_java.LayoutInJavaActivity"></activity>
+        <activity android:name=".ui_and_ux.layout_in_java.LayoutInJavaActivity" />
+        <activity android:name=".ui_and_ux.constrain_layout.ConstrainLayoutTestActivity"></activity>
     </application>
 
 </manifest>
