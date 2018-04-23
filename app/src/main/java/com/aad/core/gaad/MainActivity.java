@@ -11,6 +11,8 @@ import com.aad.core.gaad.application_components.bg_task_inside_service.IntentSer
 import com.aad.core.gaad.application_components.job_schedule.JobScheduleTestActivity;
 import com.aad.core.gaad.application_components.loader.LoaderActivity;
 import com.aad.core.gaad.application_components.shedule_task_by_alarm.AlarmActivity;
+import com.aad.core.gaad.enhanced_system_integration.notification.NotificationActivity;
+import com.aad.core.gaad.enhanced_system_integration.notification.NotificationUtility;
 import com.aad.core.gaad.persistent_data_storage.content_provider.ContentProviderTestActivity;
 import com.aad.core.gaad.persistent_data_storage.preference.PreferenceTestActivity;
 import com.aad.core.gaad.persistent_data_storage.raed_raw_resources.RawResourcesReadActivity;
@@ -18,7 +20,7 @@ import com.aad.core.gaad.ui_and_ux.layout_in_java.LayoutInJavaActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button jobSchedule, contentProvider, readResources, preference, loader, javaLayout, bgTask,alarmTask;
+    Button jobSchedule, contentProvider, readResources, preference, loader, javaLayout, bgTask, alarmTask, notification;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         javaLayout = (Button) findViewById(R.id.button_java_layout);
         bgTask = (Button) findViewById(R.id.button_bg_task_service);
         alarmTask = (Button) findViewById(R.id.button_alarm_task);
+        notification = (Button) findViewById(R.id.button_notification);
 
 
         jobSchedule.setOnClickListener(this);
@@ -43,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         javaLayout.setOnClickListener(this);
         bgTask.setOnClickListener(this);
         alarmTask.setOnClickListener(this);
+        notification.setOnClickListener(this);
     }
 
     @Override
@@ -71,6 +75,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button_alarm_task:
                 startActivity(new Intent(MainActivity.this, AlarmActivity.class));
+                break;
+            case R.id.button_notification:
+                startActivity(new Intent(MainActivity.this, NotificationActivity.class));
                 break;
         }
     }

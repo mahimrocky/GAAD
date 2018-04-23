@@ -25,8 +25,7 @@
             android:permission="android.permission.BIND_JOB_SERVICE" />
         <service android:name=".application_components.bg_task_inside_service.IntentServiceTest" />
 
-        <receiver android:name=".application_components.shedule_task_by_alarm.AlarmReceiver"/>
-
+        <receiver android:name=".application_components.shedule_task_by_alarm.AlarmReceiver" />
         <receiver android:name=".application_components.shedule_task_by_alarm.BootReciever">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -56,6 +55,7 @@
         <activity android:name=".ui_and_ux.layout_in_java.LayoutInJavaActivity" />
         <activity android:name=".ui_and_ux.constrain_layout.ConstrainLayoutTestActivity" />
         <activity android:name=".application_components.bg_task_inside_service.IntentServiceTestActivity" />
+        <activity android:name=".enhanced_system_integration.notification.NotificationActivity"></activity>
     </application>
 
 </manifest>
