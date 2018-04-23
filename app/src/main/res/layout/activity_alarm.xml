@@ -6,4 +6,19 @@
     android:layout_height="match_parent"
     tools:context="com.aad.core.gaad.application_components.shedule_task_by_alarm.AlarmActivity">
 
+    <Button
+        android:id="@+id/setAlarmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Alarm" />
+
+    <Button
+        android:id="@+id/cancelAlarmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Cancel Alarm"
+        app:layout_constraintTop_toBottomOf="@+id/setAlarmButton"
+        />
+
 </android.support.constraint.ConstraintLayout>

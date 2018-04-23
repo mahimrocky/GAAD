@@ -57,6 +57,12 @@
                 android:layout_height="wrap_content"
                 android:text="BG task in Service" />
 
+            <Button
+                android:id="@+id/button_alarm_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alarm Task" />
+
         </LinearLayout>
 
     </ScrollView>
