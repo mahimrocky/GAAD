@@ -7,39 +7,58 @@
     android:orientation="vertical"
     tools:context="com.aad.core.gaad.MainActivity">
 
-    <Button
-        android:id="@+id/button_job_schedule"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Job Schedule" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button_content_provider"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Content Provider" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button_read_resources"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Read Resources" />
+            <Button
+                android:id="@+id/button_job_schedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Job Schedule" />
 
-    <Button
-        android:id="@+id/button_preference"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Preference" />
+            <Button
+                android:id="@+id/button_content_provider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Content Provider" />
 
-    <Button
-        android:id="@+id/button_loader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Loader" />
-    <Button
-        android:id="@+id/button_java_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Java Layout" />
+            <Button
+                android:id="@+id/button_read_resources"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Read Resources" />
+
+            <Button
+                android:id="@+id/button_preference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preference" />
+
+            <Button
+                android:id="@+id/button_loader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loader" />
+
+            <Button
+                android:id="@+id/button_java_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Java Layout" />
+            <Button
+                android:id="@+id/button_bg_task_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BG task in Service" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
