@@ -16,6 +16,7 @@ package com.aad.core.gaad.enhanced_system_integration.widget;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.appwidget.AppWidgetManager;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
@@ -29,7 +30,23 @@ public class WidgetService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(this
+
+        int number = (new Random().nextInt(100));
+
+        RemoteViews remoteViews = new RemoteViews(this
+                .getApplicationContext().getPackageName(),
+                R.layout.activity_widget);
+        Log.w("WidgetExample", String.valueOf(number));
+        // Set the text
+        remoteViews.setTextViewText(R.id.textView,
+                "Random: " + String.valueOf(number));
+
+        ComponentName theWidget = new ComponentName(this, WidgetActivity.class);
+        AppWidgetManager manager = AppWidgetManager.getInstance(this);
+        manager.updateAppWidget(theWidget, remoteViews);
+
+        // comment out if dont need to update
+        /*AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(this
                 .getApplicationContext());
 
         int[] allWidgetIds = intent
@@ -61,7 +78,7 @@ public class WidgetService extends Service {
             remoteViews.setOnClickPendingIntent(R.id.button, pendingIntent);
             appWidgetManager.updateAppWidget(widgetId, remoteViews);
         }
-        stopSelf();
+        stopSelf();*/
         return super.onStartCommand(intent, flags, startId);
     }
 

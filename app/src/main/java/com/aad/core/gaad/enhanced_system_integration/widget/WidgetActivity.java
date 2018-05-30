@@ -13,6 +13,7 @@ package com.aad.core.gaad.enhanced_system_integration.widget;
  *  ****************************************************************************
  */
 
+import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
@@ -20,6 +21,8 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.SystemClock;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.RemoteViews;
 import android.widget.Toast;
@@ -40,7 +43,11 @@ public class WidgetActivity extends AppWidgetProvider {
         intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, allWidgetIds);
 
         // Update the widgets via the service
-        context.startService(intent);
+        //context.startService(intent);
+
+        for (int appWidgetId : appWidgetIds) {
+            updateServiceWidget( context,  appWidgetManager, appWidgetId);
+        }
 
        /* for (int i = 0; i < appWidgetIds.length; i++) {
             int currentWidgetId = appWidgetIds[i];
@@ -60,4 +67,25 @@ public class WidgetActivity extends AppWidgetProvider {
             Toast.makeText(context, "widget added", Toast.LENGTH_SHORT).show();
         }*/
     }
+
+    static void updateServiceWidget(Context context, AppWidgetManager appWidgetManager,
+                                    int appWidgetId) {
+        PendingIntent service = null;
+        final AlarmManager manager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        final Intent i = new Intent(context, WidgetService.class);
+
+        if (service == null) {
+            service = PendingIntent.getService(context, 0, i, PendingIntent.FLAG_CANCEL_CURRENT);
+        }
+        manager.setRepeating(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime(), 60000, service);
+        //if you need to call your service less than 60 sec
+        //answer is here:
+        //http://stackoverflow.com/questions/29998313/how-to-run-background-service-after-every-5-sec-not-working-in-android-5-1
+        Log.d("UpdatingWidget: ","onUpdate");
+    }
+
+    static void updateService(){
+
+    }
+
 }
