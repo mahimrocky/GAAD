@@ -28,7 +28,7 @@ import java.util.Random;
 public class WidgetService extends Service {
 
     @Override
-    public void onStart(Intent intent, int startId) {
+    public int onStartCommand(Intent intent, int flags, int startId) {
         AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(this
                 .getApplicationContext());
 
@@ -62,9 +62,10 @@ public class WidgetService extends Service {
             appWidgetManager.updateAppWidget(widgetId, remoteViews);
         }
         stopSelf();
-
-        super.onStart(intent, startId);
+        return super.onStartCommand(intent, flags, startId);
     }
+
+
 
     @Override
     public IBinder onBind(Intent intent) {
