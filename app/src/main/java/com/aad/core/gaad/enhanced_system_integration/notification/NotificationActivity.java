@@ -10,7 +10,7 @@ import com.aad.core.gaad.R;
 public class NotificationActivity extends AppCompatActivity implements View.OnClickListener {
 
     private NotificationUtility notificationUtil;
-    Button standard;
+    Button standard, standardHead;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,9 +18,11 @@ public class NotificationActivity extends AppCompatActivity implements View.OnCl
         setContentView(R.layout.activity_notification);
 
         standard = (Button) findViewById(R.id.standard);
+        standardHead = (Button) findViewById(R.id.standard_head);
 
 
         standard.setOnClickListener(this);
+        standardHead.setOnClickListener(this);
 
         notificationUtil = new NotificationUtility();
 
@@ -31,6 +33,9 @@ public class NotificationActivity extends AppCompatActivity implements View.OnCl
         switch (view.getId()) {
             case R.id.standard:
                 notificationUtil.showStandardNotification(this);
+                break;
+            case R.id.standard_head:
+                notificationUtil.showStandardHeadsUpNotification(this);
                 break;
         }
     }

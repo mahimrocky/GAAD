@@ -55,7 +55,17 @@
         <activity android:name=".ui_and_ux.layout_in_java.LayoutInJavaActivity" />
         <activity android:name=".ui_and_ux.constrain_layout.ConstrainLayoutTestActivity" />
         <activity android:name=".application_components.bg_task_inside_service.IntentServiceTestActivity" />
-        <activity android:name=".enhanced_system_integration.notification.NotificationActivity"></activity>
+        <activity android:name=".enhanced_system_integration.notification.NotificationActivity" />
+
+        <receiver android:name=".enhanced_system_integration.widget.WidgetActivity">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_test" />
+        </receiver>
     </application>
 
 </manifest>
