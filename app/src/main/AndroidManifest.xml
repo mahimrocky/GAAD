@@ -24,6 +24,7 @@
             android:name=".application_components.job_schedule.JobScheduleTestService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
         <service android:name=".application_components.bg_task_inside_service.IntentServiceTest" />
+        <service android:name=".enhanced_system_integration.widget.WidgetService" />
 
         <receiver android:name=".application_components.shedule_task_by_alarm.AlarmReceiver" />
         <receiver android:name=".application_components.shedule_task_by_alarm.BootReciever">

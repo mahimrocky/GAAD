@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:transitionGroup="true"
+    android:background="@color/colorAccent"
     tools:context=".enhanced_system_integration.widget.WidgetActivity">
 
     <TextView
@@ -13,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:text="GAAD Practice"
         android:textColor="#ff3412ff"
-        android:textSize="35dp" />
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/button"
